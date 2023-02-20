@@ -5,16 +5,151 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>JS by W3-Schools</title>
 	<script src="script.js"></script>
+
+	<style>
+		h2 {
+			text-align: center;
+		}
+		div {
+			text-align: center;
+		}
+		#profile {
+			width: 300px;
+			margin: auto;
+		}
+	</style>
 </head>
 <body>
 
-	<h2>My First JavaScript</h2>
+<!-------- JS INTRODUCTION ---------->
+
+<!-------- JS can change HTML content ---------->
+<!--
+	<h2>Changing Content Through JS</h2>
+
+<div>
+	<p>Hello, I am a JS program and I know my creator very well</p>
 
 	<button type="button"
-	onclick="document.getElementById('demo').innerHTML = Date()">
-	Click me to display Date and Time.</button>
+	onclick='document.getElementById("demo").innerHTML = cname()'>
+	Click me to see my creator's name</button>
 
-	<p id="demo"></p>
+	<p id="demo">You will see my creator's name here. </p>
+
+	<button type="button" onclick='document.getElementById("edu").innerHTML = edu()'> Click here to check my creator's qualification </button>
+
+	<p id="edu">My creator's qualification goes in this line. </p>
+</div>
+
+<hr>	-->
+
+<!-------- JS can change HTML attribute value ---------->
+
+<!--
+	<h2>Changing HTML attributes Through JS</h2>
+
+<div>
+	<button type="button" onclick="document.getElementById('myimg').src='before.jpeg'"> Click for Before Marriage Picture </button>
+
+	<img id="myimg" src="original.jpeg" height="300px">
+
+	<button type="button" onclick="document.getElementById('myimg').src='after.jpeg'"> Click for After Marriage Picture </button>
+
+	<br>
+
+	<button type="button" onclick="document.getElementById('myimg').src='original.jpeg'"> Click for Recent Picture </button>
+</div>
+
+<hr>	-->
+
+<!-------- JS can change HTML styles ---------->
+
+<!--
+<h2>Changing HTML styles Through JS</h2>
+
+<div>
+	<p id="dtext"> My name is Saleem Shahzad </p>
+	<button type="button" onclick="document.getElementById('dtext').style.fontSize='1.5em'">Click here to ehance font size</button>
+</div>
+<hr>	-->
+
+<!-------- JS can hide HTML elements --------->
+
+<!--
+<h2> Hiding an HTML element </h2>
+<div>
+
+	<img id="profile" src="profile.jpg"> <br>
+
+	<button type="button" onclick="hideImage()"> Click here to hide above image </button>
+
+	<button type="button" onclick="showImage()"> Click here to show image </button>
+
+</div>
+<hr>	-->
+
+<!-------- JS WHERE TO ---------->
+
+<!-- JS code is usually placed between <script> and </script>. JS code can be placed in head tag or in body tag (at bottom i.e. just above </body>. This is quite useful when high displaying speed is required.) or can be put in an external .js file which will be linked later through source attribute of script element. External scripts cannot contain <script> element.	-->
+
+<!-------- JS OUTPUT ---------->
+
+<!-------- innerHTML --------->
+
+<!-------- document.write() --------->
+
+<!--
+<h2> Use of document.write() </h2>
+<div>
+	<p> Below is the response of document.write function.  </p>
+
+	<script>
+		document.write(5 + 12);
+	</script>
+
+	<p><b> Never call/invoke document.write function after an html page is loaded as it will overwrite everything else. Use it only for testing purposes </b></p>
+</div>
+<hr>	-->
+
+<!-------- window.alert() --------->
+
+<!--
+<h2> Use of window.alert() </h2>
+<div>
+	<p> Refresh this page to see alertbox.  </p>
+
+	<script>
+		window.alert(5 + 12);
+	</script>
+	<p><b> All objects and methods in JS are defined in global scope. It is, therefore, not mandatory to use 'window' keyword. Just alert() would do the job. </b></p>
+</div>
+<hr>	-->
+
+<!-------- window.alert() --------->
+
+<!--
+<h2>Use of console.log() </h2>
+<div>
+<p> Right click anywhere on screen. Click 'Inspect Element'. Click console. You will see the output there. </p>
+
+<script>
+console.log(5 + 6);
+</script>
+
+</div>
+<hr>	-->
+
+<!-------- window.print() --------->
+
+<!--
+<h2>The window.print() Method</h2>
+
+<div>
+<p>Click the button to print the current page.</p>
+
+<button onclick="window.print()">Print this page</button>
+</div>
+<hr>	-->
 
 </body>
 </html>
