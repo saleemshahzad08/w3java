@@ -180,4 +180,29 @@ console.log(`Dear Sawera! ${a} ${b}`);
 
 
 let text = String.fromCharCode(67, 72, 77);
-console.log(text);		*/ 
+console.log(text);	
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+
+let a = toCelsius(98.6);
+console.log("Normal human body temperature is " + a + ".");
+
+
+
+const a = {company: "Suzuki", model: "2012", maxSpeed: "120Km/h"}
+console.log("The manufacturer of vehicle is " + a.company);
+
+*/
+
+const a = {
+fName: "Saleem", 
+lName: "Shahzad", 
+fullName: function () {
+	return this.fName + " " + this.lName;
+}
+}
+
+console.log(a.fullName());
+
