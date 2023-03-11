@@ -194,7 +194,7 @@ console.log("Normal human body temperature is " + a + ".");
 const a = {company: "Suzuki", model: "2012", maxSpeed: "120Km/h"}
 console.log("The manufacturer of vehicle is " + a.company);
 
-*/
+
 
 const a = {
 fName: "Saleem", 
@@ -204,5 +204,17 @@ fullName: function () {
 }
 }
 
-console.log(a.fullName());
+console.log(a.fullName());	
+
+let a = 32;
+console.log(a.toString(36)); // Output: w
+console.log(a.toString(32)); // Output: 10
+console.log(a.toString(16)); // Output: 20
+console.log(a.toString(12)); // Output: 28
+console.log(a.toString(10)); // Output: 32
+console.log(a.toString(8)); // Output: 40
+console.log(a.toString(2)); // Output: 100000		*/
+
+let a = 32
+console.log(a.constructor);
 
