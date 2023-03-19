@@ -213,8 +213,25 @@ console.log(a.toString(16)); // Output: 20
 console.log(a.toString(12)); // Output: 28
 console.log(a.toString(10)); // Output: 32
 console.log(a.toString(8)); // Output: 40
-console.log(a.toString(2)); // Output: 100000		*/
+console.log(a.toString(2)); // Output: 100000		
+
 
 let a = 32
-console.log(a.constructor);
+console.log(a.constructor);		*/
+
+
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
 
