@@ -217,21 +217,31 @@ console.log(a.toString(2)); // Output: 100000
 
 
 let a = 32
-console.log(a.constructor);		*/
+console.log(a.constructor);		
 
+let a = 345.7982;
+console.log(a.toExponential(2));		*/
 
-var x = document.getElementById("demo");
+const a = ["Muneeb","Hassan","Memoona"];
+let flen = a.length;
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
+let text = "<ul>";
+for (i = 0; i < flen; i++) {
+	text += "<li>" + a[i] + "</li>";
 }
-    
-function showPosition(position) {
-    x.innerHTML="Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
+text += "</ul>";
+
+/* yahan agar sirf get element by id wala kam kia to script 
+ko html main body se pehle rakhna prre ga ta k jb script load
+ho to tb wo element jis k innerHTML ko change krna ha wo mojood
+ho. Agar head main rakha to script load ho jaye gi aur wo element
+abhi load hua he ni hoga to issue hoga.  */
+
+
+window.onload = function() {
+	list();
+	function list() {
+		document.getElementById("demo").innerHTML = text; 
+	};
 }
 
