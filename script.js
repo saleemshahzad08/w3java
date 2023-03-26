@@ -220,7 +220,9 @@ let a = 32
 console.log(a.constructor);		
 
 let a = 345.7982;
-console.log(a.toExponential(2));		*/
+console.log(a.toExponential(2));		
+
+// -------------- Looping over Array ------------------
 
 const a = ["Muneeb","Hassan","Memoona"];
 let flen = a.length;
@@ -232,16 +234,78 @@ for (i = 0; i < flen; i++) {
 text += "</ul>";
 
 /* yahan agar sirf get element by id wala kam kia to script 
-ko html main body se pehle rakhna prre ga ta k jb script load
+ko html main </body> se pehle rakhna prre ga ta k jb script load
 ho to tb wo element jis k innerHTML ko change krna ha wo mojood
 ho. Agar head main rakha to script load ho jaye gi aur wo element
 abhi load hua he ni hoga to issue hoga.  */
 
-
+/*
 window.onload = function() {
 	list();
 	function list() {
 		document.getElementById("demo").innerHTML = text; 
 	};
 }
+*/
+
+// ------------------- Fill Method of Array ------------------
+
+// const courses = ["Algebra", "Calculus", "Real Analysis", "DG", "Spline", "ODE", "PDE"];
+
+// courses.fill("Mathematics", 3, 7);
+
+// console.log(courses); 
+
+// ------------------- Filter Method of Array ----------------
+
+// const marks = [33, 37,49,85,12,15,17,34,28];
+// const newArray = marks.filter(passingMarks);
+
+// function passingMarks(marks) {
+// 	return marks > 33
+// };
+
+// console.log(newArray); 
+
+// window.onload = function() {
+// 	passed();
+// 	function passed() {
+// 		document.getElementById("demo").innerHTML = newArray; 
+// 	};
+// }
+
+// const ages = [32, 33, 12, 40];
+
+// function checkAge(age) {
+//   return age > document.getElementById("ageToCheck").value;
+// }
+
+// function myFunction() {
+//   document.getElementById("demo").innerHTML = ages.filter(checkAge);
+// }
+
+// -------------------- Find Method of Array -----------------
+
+// const subjects = ["Urdu", "Math", "Physics", "Chemistry", "Math"];
+
+// let result = subjects.find(match);
+
+// function match(subject) {
+// 	return subject == "Math"
+// };
+
+// console.log(result);
+
+// window.onload = function() {
+// 	finding();
+// 	function finding() {
+// 		document.getElementById("demo").innerHTML = result; 
+// 	};
+// }
+
+// ------------------- From Method of Array ------------------
+
+let text = "ABCDEFGHI";
+let a = Array.from(text);
+console.log(a);
 
